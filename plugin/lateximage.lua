@@ -1,0 +1,1 @@
+print("LatexImage plugin loaded!")
