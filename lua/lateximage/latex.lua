@@ -10,14 +10,14 @@ M.insert_image = function(image)
 end
 
 -- This also does the same thing, but with a different approach
-M.insert_text = function(text)
+M.insert_text = function(file)
 	local pos = vim.api.nvim_win_get_cursor(0)
 	local row = pos[1]
 	local col = pos[2]
 	-- print("Row: ", row)
 	-- print("Col: ", col)
 
-	local latex_include_string = "\\includegraphics[width=\\linewidth]{" .. text .. "}"
+	local latex_include_string = "\\includegraphics[width=\\linewidth]{" .. file .. "}"
 	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { latex_include_string })
 end
 return M

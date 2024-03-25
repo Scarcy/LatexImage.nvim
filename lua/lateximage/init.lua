@@ -25,7 +25,7 @@ M.create = function()
 	local fname = vim.fn.input("File: ", "", "file")
 	file = img.create_image(dir, fname)
 	img.open_image(file)
-  latex.insert_text(file)
+	latex.insert_text(file)
 end
 
 -- Temp debug function
@@ -33,4 +33,7 @@ M.print_dir = function()
 	print(dir)
 end
 
+local cmd = vim.api.nvim_create_user_command
+
+cmd("LatexImage", M.create, {})
 return M
