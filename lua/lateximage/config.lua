@@ -1,5 +1,4 @@
 local M = {}
-local utils = require("lateximage.utils")
 
 M.get_dir = function(opts)
 	local ok, dir = pcall(function()
@@ -12,7 +11,7 @@ M.get_dir = function(opts)
 		return nil
 	end
 end
-
+-- TODO: Check for Pinta installation as well.
 M.check_image_magick_dependency = function()
 	local status, _, _ = os.execute("magick --version > /dev/null 2>&1")
 	if status == 0 then

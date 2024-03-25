@@ -20,11 +20,12 @@ end
 M.insert = function(opts)
 	latex.insert_text(opts)
 end
-
+-- This is the main functionality function. The others are just placeholder test functions --
 M.create = function()
 	local fname = vim.fn.input("File: ", "", "file")
 	file = img.create_image(dir, fname)
 	img.open_image(file)
+  latex.insert_text(file)
 end
 
 -- Temp debug function

@@ -1,6 +1,7 @@
 local M = {}
 -- This function in its current state inserts text at the current cursor position.
 -- It inserts the text sent as arguments to the function
+
 M.insert_image = function(image)
 	local pos = vim.api.nvim_win_get_cursor(0)[2]
 	local line = vim.api.nvim_get_current_line()
@@ -15,6 +16,8 @@ M.insert_text = function(text)
 	local col = pos[2]
 	-- print("Row: ", row)
 	-- print("Col: ", col)
-	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { text })
+
+	local latex_include_string = "\\includegraphics[width=\\linewidth]{" .. text .. "}"
+	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { latex_include_string })
 end
 return M
