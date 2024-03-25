@@ -1,5 +1,6 @@
 # LatexImage Neovim Plugin
-
+## Important Note
+This plugin at the current iteration will only work on MacOS. That is because of the hardcoded use of Pinta and it's directory location. Every dependency used is available for Linux aswell, so I might make it useable for Linux if anyone wants it.
 ## Description
 LatexImage is a Neovim plugin designed to streamline the process of including graphical content in LaTeX documents. It is particularly useful when taking notes that include graphs, diagrams, and other visual elements. The plugin automates the creation of blank PNG files, allows for easy editing in Pinta, and then inserts the necessary LaTeX `\includegraphics` command directly into your Neovim buffer.
 
