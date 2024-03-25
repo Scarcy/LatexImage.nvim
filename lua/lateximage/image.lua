@@ -1,5 +1,4 @@
 local M = {}
-
 M.create_image = function(path, imgName)
 	local pathString = path .. imgName .. ".png"
 	print(pathString)
