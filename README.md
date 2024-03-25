@@ -26,35 +26,18 @@ LatexImage is a Neovim plugin designed to streamline the process of including gr
 1. **Setup Plugin:**
    - Call the setup function in your Neovim configuration file to initialize the plugin with necessary options.
      ```lua
-        require("lateximage").setup({
-	        opts = { dir = "path/to/image/directory/" },
+	require("lateximage").setup({
+	  opts = { dir = "path/to/image/directory/" },
         })
      ```
    - Lazy.nvim
    ```lua
-        {"scarcy/lateximage.nvim",
-        opts = {
-            dir = "path/to/image/directory/"
-        }
+     {"scarcy/lateximage.nvim",
+     opts = {
+       dir = "path/to/image/directory/"
+     }
    ```
 2. **Create and Edit Image:**
    - Use the command `:LatexImage` to create a new image and open it in Pinta.
 3. **Insert Image in LaTeX Document:**
-   - Once the image is saved and Pinta is closed, the plugin automatically inserts the `\includegraphics` command at your current cursor position in Neovim.
-
-## Configuration
-- Configure the plugin by passing options to the `setup` function. Refer to the plugin documentation for available configuration options.
-
-## Troubleshooting
-- Ensure all dependencies are correctly installed.
-- Check if Neovim has appropriate permissions to execute external commands (like opening Pinta and using ImageMagick).
-
-## Contributing
-Contributions to LatexImage are welcome. Please follow the standard GitHub pull request process to submit your changes.
-
-## License
-Specify the license under which your plugin is distributed.
-
----
-
-This template covers the key aspects that users need to know. You should replace placeholders (like `your-username` in the installation section) with actual information and expand sections like `Configuration` based on your plugin's capabilities and options.
+   - The plugin automatically inserts the `\includegraphics` command at your current cursor position in Neovim.
